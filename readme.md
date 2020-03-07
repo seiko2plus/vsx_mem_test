@@ -57,7 +57,7 @@ TODO
 
 
 #### Benchmarking results with baseline ISA2.07 A.K.A  Power8/VSX
-[GCC 8.3.0](reports_vsx/gcc_8_vs_assign_gcc_8.md), [GCC 7.4.0](reports_vsx/gcc_7_vs_deref_gcc_7_assign_gcc_7_store-deref_gcc_7.md), [GCC 6.5.0](reports_vsx/gcc_6_vs_deref_gcc_6_assign_gcc_6_store-deref_gcc_6.md), [GCC 5.5.0](reports_vsx/gcc_5_vs_deref_gcc_5_assign_gcc_5_store-deref_gcc_5.md), [GCC 4.9.3](reports_vsx/gcc_4.9_vs_deref_gcc_4.9_assign_gcc_4.9_store-deref_gcc_4.9.md), [Clang 4.0.1](reports_vsx/clang_4.0_vs_deref_clang_4.0_assign_clang_4.0_store-deref_clang_4.0.md), [Clang 5.0.1](reports_vsx/clang_5_vs_assign_clang_5.md), [Clang 6.0.1](reports_vsx/clang_6_vs_assign_clang_6.md), [Clang 7.0.1](reports_vsx/clang_7_vs_assign_clang_7.md) , [Clang 8.0.1](reports_vsx/clang_8_vs_assign_clang_8.md)
+[GCC 8.3.0](reports_vsx/gcc_8_vs_assign_gcc_8.md), [GCC 7.4.0](reports_vsx/gcc_7_vs_deref_gcc_7_assign_gcc_7_store-deref_gcc_7.md), [GCC 6.5.0](reports_vsx/gcc_6_vs_deref_gcc_6_assign_gcc_6_store-deref_gcc_6.md), [GCC 5.5.0](reports_vsx/gcc_5_vs_deref_gcc_5_assign_gcc_5_store-deref_gcc_5.md), [GCC 4.9.3](reports_vsx/gcc_4.9_vs_deref_gcc_4.9_assign_gcc_4.9_store-deref_gcc_4.9.md), [Clang 4.0.1](reports_vsx/clang_4.0_vs_deref_clang_4.0_assign_clang_4.0_store-deref_clang_4.0.md), [Clang 5.0.1](reports_vsx/clang_5.0_vs_assign_clang_5.0.md), [Clang 6.0.1](reports_vsx/clang_6_vs_assign_clang_6.md), [Clang 7.0.1](reports_vsx/clang_7_vs_assign_clang_7.md) , [Clang 8.0.1](reports_vsx/clang_8_vs_assign_clang_8.md)
 
 ----
 
