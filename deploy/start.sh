@@ -69,11 +69,11 @@ function generate_report {
         elif [ ! -f $test_path ]; then
             echo "Skipping ${build_name}, test path ${test_path} not exist"
         else
+            cp -f $perf_path ${build_name}.xml
+            cp -f $test_path ${build_name}_test.log
             if grep -q "FAILED" "$test_path"; then
                echo "Skipping ${build_name}, accuracy test failed. check ${test_path}"
             else
-                cp -f $perf_path ${build_name}.xml
-                cp -f $test_path ${build_name}_test.log
                 perf_args="${perf_args} ${build_name}.xml"
                 if [ -z "$report_name" ]; then
                     report_name="${build_name}_vs"
