@@ -53,8 +53,7 @@ TODO
 ---
 
 #### Benchmarking results with baseline ISA3.00 A.K.A  Power9/VSX3
-
-
+[GCC 8.3.0](reports_vsx3/gcc_8_vs_deref_gcc_8_assign_gcc_8_store-deref_gcc_8.md), [GCC 7.4.0](reports_vsx3/gcc_7_vs_deref_gcc_7_assign_gcc_7_store-deref_gcc_7.md), [GCC 6.5.0](reports_vsx3/gcc_6_vs_deref_gcc_6_assign_gcc_6_store-deref_gcc_6.md), [GCC 5.5.0](reports_vsx3/gcc_5_vs_deref_gcc_5_assign_gcc_5_store-deref_gcc_5.md), [GCC 4.9.3](reports_vsx3/gcc_4.9_vs_deref_gcc_4.9_assign_gcc_4.9_store-deref_gcc_4.9.md)
 
 #### Benchmarking results with baseline ISA2.07 A.K.A  Power8/VSX
 
