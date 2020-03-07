@@ -1,0 +1,2141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="120" failures="0" disabled="0" errors="0" timestamp="2020-03-06T21:08:16" time="17.286" cv_module_name="core" cv_implementation="plain" cv_num_threads="1" test_tags="" test_tags_skip="mem_6gb,verylong" test_tags_force="" cv_version="4.2.0-dev" cv_version_build="4.2.0-dev" cv_vcs_version="4.2.0-369-g6271192a32-dirty" cv_build_type="Release" cv_build_type_build="Release" cv_compiler="/usr/lib/ccache/clang++-4.0  (ver 4.0.1)" cv_parallel_framework="pthreads" cv_cpu_features="VSX" cv_ocl="disabled" name="AllTests">
+  <testsuite name="MatType_Length_dot" tests="36" failures="0" disabled="0" errors="0" time="0.315">
+    <testcase name="dot/0" value_param="(8UC1, 32)" status="run" time="0" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="2048"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="201"/>
+<property name="median" value="207"/>
+<property name="gmean" value="207"/>
+<property name="gstddev" value="0.016098"/>
+<property name="mean" value="207"/>
+<property name="stddev" value="3"/>
+</properties>
+    </testcase>
+    <testcase name="dot/1" value_param="(8UC1, 64)" status="run" time="0" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="8192"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="357"/>
+<property name="median" value="364"/>
+<property name="gmean" value="364"/>
+<property name="gstddev" value="0.010158"/>
+<property name="mean" value="364"/>
+<property name="stddev" value="4"/>
+</properties>
+    </testcase>
+    <testcase name="dot/2" value_param="(8UC1, 128)" status="run" time="0" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="32768"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="1107"/>
+<property name="median" value="1123"/>
+<property name="gmean" value="1123"/>
+<property name="gstddev" value="0.006822"/>
+<property name="mean" value="1123"/>
+<property name="stddev" value="8"/>
+</properties>
+    </testcase>
+    <testcase name="dot/3" value_param="(8UC1, 256)" status="run" time="0.001" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="131072"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="3908"/>
+<property name="median" value="3937"/>
+<property name="gmean" value="3937"/>
+<property name="gstddev" value="0.003041"/>
+<property name="mean" value="3937"/>
+<property name="stddev" value="12"/>
+</properties>
+    </testcase>
+    <testcase name="dot/4" value_param="(8UC1, 512)" status="run" time="0.002" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="524288"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="15513"/>
+<property name="median" value="15599"/>
+<property name="gmean" value="15597"/>
+<property name="gstddev" value="0.002093"/>
+<property name="mean" value="15597"/>
+<property name="stddev" value="33"/>
+</properties>
+    </testcase>
+    <testcase name="dot/5" value_param="(8UC1, 1024)" status="run" time="0.008" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="2097152"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="60603"/>
+<property name="median" value="60753"/>
+<property name="gmean" value="60755"/>
+<property name="gstddev" value="0.000918"/>
+<property name="mean" value="60755"/>
+<property name="stddev" value="56"/>
+</properties>
+    </testcase>
+    <testcase name="dot/6" value_param="(8SC1, 32)" status="run" time="0.001" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="2048"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="238"/>
+<property name="median" value="251"/>
+<property name="gmean" value="251"/>
+<property name="gstddev" value="0.017585"/>
+<property name="mean" value="251"/>
+<property name="stddev" value="4"/>
+</properties>
+    </testcase>
+    <testcase name="dot/7" value_param="(8SC1, 64)" status="run" time="0" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="8192"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="610"/>
+<property name="median" value="626"/>
+<property name="gmean" value="626"/>
+<property name="gstddev" value="0.010619"/>
+<property name="mean" value="626"/>
+<property name="stddev" value="7"/>
+</properties>
+    </testcase>
+    <testcase name="dot/8" value_param="(8SC1, 128)" status="run" time="0" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="32768"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="2058"/>
+<property name="median" value="2086"/>
+<property name="gmean" value="2085"/>
+<property name="gstddev" value="0.005397"/>
+<property name="mean" value="2085"/>
+<property name="stddev" value="11"/>
+</properties>
+    </testcase>
+    <testcase name="dot/9" value_param="(8SC1, 256)" status="run" time="0.001" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="131072"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="7773"/>
+<property name="median" value="7832"/>
+<property name="gmean" value="7830"/>
+<property name="gstddev" value="0.002881"/>
+<property name="mean" value="7830"/>
+<property name="stddev" value="23"/>
+</properties>
+    </testcase>
+    <testcase name="dot/10" value_param="(8SC1, 512)" status="run" time="0.004" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="524288"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="30976"/>
+<property name="median" value="31120"/>
+<property name="gmean" value="31116"/>
+<property name="gstddev" value="0.001617"/>
+<property name="mean" value="31116"/>
+<property name="stddev" value="50"/>
+</properties>
+    </testcase>
+    <testcase name="dot/11" value_param="(8SC1, 1024)" status="run" time="0.015" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="2097152"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="122243"/>
+<property name="median" value="122566"/>
+<property name="gmean" value="122549"/>
+<property name="gstddev" value="0.000805"/>
+<property name="mean" value="122549"/>
+<property name="stddev" value="99"/>
+</properties>
+    </testcase>
+    <testcase name="dot/12" value_param="(16SC1, 32)" status="run" time="0" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="4096"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="354"/>
+<property name="median" value="367"/>
+<property name="gmean" value="367"/>
+<property name="gstddev" value="0.013172"/>
+<property name="mean" value="367"/>
+<property name="stddev" value="5"/>
+</properties>
+    </testcase>
+    <testcase name="dot/13" value_param="(16SC1, 64)" status="run" time="0" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="16384"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="1007"/>
+<property name="median" value="1025"/>
+<property name="gmean" value="1024"/>
+<property name="gstddev" value="0.005372"/>
+<property name="mean" value="1024"/>
+<property name="stddev" value="5"/>
+</properties>
+    </testcase>
+    <testcase name="dot/14" value_param="(16SC1, 128)" status="run" time="0" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="65536"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="3664"/>
+<property name="median" value="3695"/>
+<property name="gmean" value="3695"/>
+<property name="gstddev" value="0.002850"/>
+<property name="mean" value="3695"/>
+<property name="stddev" value="11"/>
+</properties>
+    </testcase>
+    <testcase name="dot/15" value_param="(16SC1, 256)" status="run" time="0.002" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="262144"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="14148"/>
+<property name="median" value="14222"/>
+<property name="gmean" value="14221"/>
+<property name="gstddev" value="0.001669"/>
+<property name="mean" value="14221"/>
+<property name="stddev" value="24"/>
+</properties>
+    </testcase>
+    <testcase name="dot/16" value_param="(16SC1, 512)" status="run" time="0.007" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="1048576"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="56418"/>
+<property name="median" value="56534"/>
+<property name="gmean" value="56527"/>
+<property name="gstddev" value="0.000709"/>
+<property name="mean" value="56527"/>
+<property name="stddev" value="40"/>
+</properties>
+    </testcase>
+    <testcase name="dot/17" value_param="(16SC1, 1024)" status="run" time="0.027" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="4194304"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="225087"/>
+<property name="median" value="225329"/>
+<property name="gmean" value="225355"/>
+<property name="gstddev" value="0.000621"/>
+<property name="mean" value="225355"/>
+<property name="stddev" value="140"/>
+</properties>
+    </testcase>
+    <testcase name="dot/18" value_param="(16UC1, 32)" status="run" time="0" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="4096"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="1073"/>
+<property name="median" value="1092"/>
+<property name="gmean" value="1092"/>
+<property name="gstddev" value="0.007497"/>
+<property name="mean" value="1092"/>
+<property name="stddev" value="8"/>
+</properties>
+    </testcase>
+    <testcase name="dot/19" value_param="(16UC1, 64)" status="run" time="0.001" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="16384"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="3984"/>
+<property name="median" value="4010"/>
+<property name="gmean" value="4010"/>
+<property name="gstddev" value="0.003510"/>
+<property name="mean" value="4010"/>
+<property name="stddev" value="14"/>
+</properties>
+    </testcase>
+    <testcase name="dot/20" value_param="(16UC1, 128)" status="run" time="0.002" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="65536"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="15521"/>
+<property name="median" value="15610"/>
+<property name="gmean" value="15608"/>
+<property name="gstddev" value="0.002223"/>
+<property name="mean" value="15608"/>
+<property name="stddev" value="35"/>
+</properties>
+    </testcase>
+    <testcase name="dot/21" value_param="(16UC1, 256)" status="run" time="0.006" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="262144"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="61744"/>
+<property name="median" value="61886"/>
+<property name="gmean" value="61885"/>
+<property name="gstddev" value="0.000830"/>
+<property name="mean" value="61885"/>
+<property name="stddev" value="51"/>
+</properties>
+    </testcase>
+    <testcase name="dot/22" value_param="(16UC1, 512)" status="run" time="0.026" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="1048576"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="246577"/>
+<property name="median" value="247503"/>
+<property name="gmean" value="247479"/>
+<property name="gstddev" value="0.000937"/>
+<property name="mean" value="247479"/>
+<property name="stddev" value="232"/>
+</properties>
+    </testcase>
+    <testcase name="dot/23" value_param="(16UC1, 1024)" status="run" time="0.104" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="4194304"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="985015"/>
+<property name="median" value="989632"/>
+<property name="gmean" value="992692"/>
+<property name="gstddev" value="0.006787"/>
+<property name="mean" value="992715"/>
+<property name="stddev" value="6770"/>
+</properties>
+    </testcase>
+    <testcase name="dot/24" value_param="(32SC1, 32)" status="run" time="0" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="8192"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="547"/>
+<property name="median" value="559"/>
+<property name="gmean" value="559"/>
+<property name="gstddev" value="0.008268"/>
+<property name="mean" value="559"/>
+<property name="stddev" value="5"/>
+</properties>
+    </testcase>
+    <testcase name="dot/25" value_param="(32SC1, 64)" status="run" time="0" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="32768"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="1783"/>
+<property name="median" value="1805"/>
+<property name="gmean" value="1804"/>
+<property name="gstddev" value="0.004922"/>
+<property name="mean" value="1804"/>
+<property name="stddev" value="9"/>
+</properties>
+    </testcase>
+    <testcase name="dot/26" value_param="(32SC1, 128)" status="run" time="0" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="131072"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="6597"/>
+<property name="median" value="6637"/>
+<property name="gmean" value="6637"/>
+<property name="gstddev" value="0.002558"/>
+<property name="mean" value="6637"/>
+<property name="stddev" value="17"/>
+</properties>
+    </testcase>
+    <testcase name="dot/27" value_param="(32SC1, 256)" status="run" time="0.004" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="524288"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="26220"/>
+<property name="median" value="26324"/>
+<property name="gmean" value="26324"/>
+<property name="gstddev" value="0.001314"/>
+<property name="mean" value="26324"/>
+<property name="stddev" value="35"/>
+</properties>
+    </testcase>
+    <testcase name="dot/28" value_param="(32SC1, 512)" status="run" time="0.012" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="2097152"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="103162"/>
+<property name="median" value="103699"/>
+<property name="gmean" value="103684"/>
+<property name="gstddev" value="0.000801"/>
+<property name="mean" value="103684"/>
+<property name="stddev" value="83"/>
+</properties>
+    </testcase>
+    <testcase name="dot/29" value_param="(32SC1, 1024)" status="run" time="0.051" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="8388608"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="415082"/>
+<property name="median" value="416472"/>
+<property name="gmean" value="417059"/>
+<property name="gstddev" value="0.004508"/>
+<property name="mean" value="417063"/>
+<property name="stddev" value="1889"/>
+</properties>
+    </testcase>
+    <testcase name="dot/30" value_param="(32FC1, 32)" status="run" time="0" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="8192"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="326"/>
+<property name="median" value="346"/>
+<property name="gmean" value="345"/>
+<property name="gstddev" value="0.017612"/>
+<property name="mean" value="345"/>
+<property name="stddev" value="6"/>
+</properties>
+    </testcase>
+    <testcase name="dot/31" value_param="(32FC1, 64)" status="run" time="0" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="32768"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="951"/>
+<property name="median" value="974"/>
+<property name="gmean" value="974"/>
+<property name="gstddev" value="0.008926"/>
+<property name="mean" value="974"/>
+<property name="stddev" value="9"/>
+</properties>
+    </testcase>
+    <testcase name="dot/32" value_param="(32FC1, 128)" status="run" time="0.001" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="131072"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="3271"/>
+<property name="median" value="3326"/>
+<property name="gmean" value="3322"/>
+<property name="gstddev" value="0.005813"/>
+<property name="mean" value="3322"/>
+<property name="stddev" value="19"/>
+</properties>
+    </testcase>
+    <testcase name="dot/33" value_param="(32FC1, 256)" status="run" time="0.002" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="524288"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="13101"/>
+<property name="median" value="13193"/>
+<property name="gmean" value="13196"/>
+<property name="gstddev" value="0.003175"/>
+<property name="mean" value="13196"/>
+<property name="stddev" value="42"/>
+</properties>
+    </testcase>
+    <testcase name="dot/34" value_param="(32FC1, 512)" status="run" time="0.007" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="2097152"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="51045"/>
+<property name="median" value="51226"/>
+<property name="gmean" value="51230"/>
+<property name="gstddev" value="0.001461"/>
+<property name="mean" value="51230"/>
+<property name="stddev" value="75"/>
+</properties>
+    </testcase>
+    <testcase name="dot/35" value_param="(32FC1, 1024)" status="run" time="0.03" classname="MatType_Length_dot">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="8388608"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="218851"/>
+<property name="median" value="228350"/>
+<property name="gmean" value="227945"/>
+<property name="gstddev" value="0.010472"/>
+<property name="mean" value="227957"/>
+<property name="stddev" value="2379"/>
+</properties>
+    </testcase>
+  </testsuite>
+  <testsuite name="Size_MatType_inRange" tests="24" failures="0" disabled="0" errors="0" time="2.714">
+    <testcase name="inRange/0" value_param="(640x480, 8UC1)" status="run" time="0.004" classname="Size_MatType_inRange">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="921600"/>
+<property name="bytesOut" value="307200"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="29183"/>
+<property name="median" value="29386"/>
+<property name="gmean" value="29381"/>
+<property name="gstddev" value="0.001886"/>
+<property name="mean" value="29381"/>
+<property name="stddev" value="55"/>
+</properties>
+    </testcase>
+    <testcase name="inRange/1" value_param="(640x480, 8UC4)" status="run" time="0.042" classname="Size_MatType_inRange">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="3686400"/>
+<property name="bytesOut" value="1228800"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="380818"/>
+<property name="median" value="381202"/>
+<property name="gmean" value="381635"/>
+<property name="gstddev" value="0.002864"/>
+<property name="mean" value="381637"/>
+<property name="stddev" value="1096"/>
+</properties>
+    </testcase>
+    <testcase name="inRange/2" value_param="(640x480, 8SC1)" status="run" time="0.004" classname="Size_MatType_inRange">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="921600"/>
+<property name="bytesOut" value="307200"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="29325"/>
+<property name="median" value="29614"/>
+<property name="gmean" value="29616"/>
+<property name="gstddev" value="0.002222"/>
+<property name="mean" value="29616"/>
+<property name="stddev" value="66"/>
+</properties>
+    </testcase>
+    <testcase name="inRange/3" value_param="(640x480, 16UC1)" status="run" time="0.011" classname="Size_MatType_inRange">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="1843200"/>
+<property name="bytesOut" value="614400"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="90598"/>
+<property name="median" value="90792"/>
+<property name="gmean" value="90782"/>
+<property name="gstddev" value="0.000967"/>
+<property name="mean" value="90782"/>
+<property name="stddev" value="88"/>
+</properties>
+    </testcase>
+    <testcase name="inRange/4" value_param="(640x480, 16SC1)" status="run" time="0.011" classname="Size_MatType_inRange">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="1843200"/>
+<property name="bytesOut" value="614400"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="90026"/>
+<property name="median" value="90255"/>
+<property name="gmean" value="90254"/>
+<property name="gstddev" value="0.000992"/>
+<property name="mean" value="90254"/>
+<property name="stddev" value="89"/>
+</properties>
+    </testcase>
+    <testcase name="inRange/5" value_param="(640x480, 32SC1)" status="run" time="0.025" classname="Size_MatType_inRange">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="3686400"/>
+<property name="bytesOut" value="1228800"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="206166"/>
+<property name="median" value="206646"/>
+<property name="gmean" value="206644"/>
+<property name="gstddev" value="0.001097"/>
+<property name="mean" value="206644"/>
+<property name="stddev" value="227"/>
+</properties>
+    </testcase>
+    <testcase name="inRange/6" value_param="(640x480, 32FC1)" status="run" time="0.023" classname="Size_MatType_inRange">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="3686400"/>
+<property name="bytesOut" value="1228800"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="195785"/>
+<property name="median" value="196210"/>
+<property name="gmean" value="196965"/>
+<property name="gstddev" value="0.007304"/>
+<property name="mean" value="196971"/>
+<property name="stddev" value="1445"/>
+</properties>
+    </testcase>
+    <testcase name="inRange/7" value_param="(640x480, 32FC4)" status="run" time="0.123" classname="Size_MatType_inRange">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="14745600"/>
+<property name="bytesOut" value="4915200"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="1058827"/>
+<property name="median" value="1074282"/>
+<property name="gmean" value="1075122"/>
+<property name="gstddev" value="0.012588"/>
+<property name="mean" value="1075207"/>
+<property name="stddev" value="13574"/>
+</properties>
+    </testcase>
+    <testcase name="inRange/8" value_param="(1280x720, 8UC1)" status="run" time="0.011" classname="Size_MatType_inRange">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="2764800"/>
+<property name="bytesOut" value="921600"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="85149"/>
+<property name="median" value="85346"/>
+<property name="gmean" value="85357"/>
+<property name="gstddev" value="0.001187"/>
+<property name="mean" value="85357"/>
+<property name="stddev" value="101"/>
+<property name="tags" value="size_hd"/>
+<property name="tags_implied" value=""/>
+</properties>
+    </testcase>
+    <testcase name="inRange/9" value_param="(1280x720, 8UC4)" status="run" time="0.127" classname="Size_MatType_inRange">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="11059200"/>
+<property name="bytesOut" value="3686400"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="1145759"/>
+<property name="median" value="1148738"/>
+<property name="gmean" value="1153254"/>
+<property name="gstddev" value="0.007183"/>
+<property name="mean" value="1153284"/>
+<property name="stddev" value="8319"/>
+<property name="tags" value="size_hd"/>
+<property name="tags_implied" value=""/>
+</properties>
+    </testcase>
+    <testcase name="inRange/10" value_param="(1280x720, 8SC1)" status="run" time="0.012" classname="Size_MatType_inRange">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="2764800"/>
+<property name="bytesOut" value="921600"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="85161"/>
+<property name="median" value="85446"/>
+<property name="gmean" value="85472"/>
+<property name="gstddev" value="0.001872"/>
+<property name="mean" value="85473"/>
+<property name="stddev" value="160"/>
+<property name="tags" value="size_hd"/>
+<property name="tags_implied" value=""/>
+</properties>
+    </testcase>
+    <testcase name="inRange/11" value_param="(1280x720, 16UC1)" status="run" time="0.033" classname="Size_MatType_inRange">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="5529600"/>
+<property name="bytesOut" value="1843200"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="270023"/>
+<property name="median" value="270643"/>
+<property name="gmean" value="270861"/>
+<property name="gstddev" value="0.003619"/>
+<property name="mean" value="270863"/>
+<property name="stddev" value="987"/>
+<property name="tags" value="size_hd"/>
+<property name="tags_implied" value=""/>
+</properties>
+    </testcase>
+    <testcase name="inRange/12" value_param="(1280x720, 16SC1)" status="run" time="0.032" classname="Size_MatType_inRange">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="5529600"/>
+<property name="bytesOut" value="1843200"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="269175"/>
+<property name="median" value="269760"/>
+<property name="gmean" value="269832"/>
+<property name="gstddev" value="0.002260"/>
+<property name="mean" value="269832"/>
+<property name="stddev" value="614"/>
+<property name="tags" value="size_hd"/>
+<property name="tags_implied" value=""/>
+</properties>
+    </testcase>
+    <testcase name="inRange/13" value_param="(1280x720, 32SC1)" status="run" time="0.073" classname="Size_MatType_inRange">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="11059200"/>
+<property name="bytesOut" value="3686400"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="593442"/>
+<property name="median" value="621792"/>
+<property name="gmean" value="614709"/>
+<property name="gstddev" value="0.021146"/>
+<property name="mean" value="614844"/>
+<property name="stddev" value="12982"/>
+<property name="tags" value="size_hd"/>
+<property name="tags_implied" value=""/>
+</properties>
+    </testcase>
+    <testcase name="inRange/14" value_param="(1280x720, 32FC1)" status="run" time="0.072" classname="Size_MatType_inRange">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="11059200"/>
+<property name="bytesOut" value="3686400"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="592816"/>
+<property name="median" value="622038"/>
+<property name="gmean" value="619792"/>
+<property name="gstddev" value="0.019526"/>
+<property name="mean" value="619908"/>
+<property name="stddev" value="12007"/>
+<property name="tags" value="size_hd"/>
+<property name="tags_implied" value=""/>
+</properties>
+    </testcase>
+    <testcase name="inRange/15" value_param="(1280x720, 32FC4)" status="run" time="0.37" classname="Size_MatType_inRange">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="44236800"/>
+<property name="bytesOut" value="14745600"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="3215784"/>
+<property name="median" value="3253564"/>
+<property name="gmean" value="3258494"/>
+<property name="gstddev" value="0.007484"/>
+<property name="mean" value="3258584"/>
+<property name="stddev" value="24402"/>
+<property name="tags" value="size_hd"/>
+<property name="tags_implied" value=""/>
+</properties>
+    </testcase>
+    <testcase name="inRange/16" value_param="(1920x1080, 8UC1)" status="run" time="0.026" classname="Size_MatType_inRange">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="6220800"/>
+<property name="bytesOut" value="2073600"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="191077"/>
+<property name="median" value="191554"/>
+<property name="gmean" value="191636"/>
+<property name="gstddev" value="0.003156"/>
+<property name="mean" value="191637"/>
+<property name="stddev" value="611"/>
+<property name="tags" value="size_fullhd"/>
+<property name="tags_implied" value="size_hd"/>
+</properties>
+    </testcase>
+    <testcase name="inRange/17" value_param="(1920x1080, 8UC4)" status="run" time="0.301" classname="Size_MatType_inRange">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="24883200"/>
+<property name="bytesOut" value="8294400"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="2695616"/>
+<property name="median" value="2737866"/>
+<property name="gmean" value="2740753"/>
+<property name="gstddev" value="0.008690"/>
+<property name="mean" value="2740855"/>
+<property name="stddev" value="23864"/>
+<property name="tags" value="size_fullhd"/>
+<property name="tags_implied" value="size_hd"/>
+</properties>
+    </testcase>
+    <testcase name="inRange/18" value_param="(1920x1080, 8SC1)" status="run" time="0.026" classname="Size_MatType_inRange">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="6220800"/>
+<property name="bytesOut" value="2073600"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="191186"/>
+<property name="median" value="191805"/>
+<property name="gmean" value="191916"/>
+<property name="gstddev" value="0.002397"/>
+<property name="mean" value="191917"/>
+<property name="stddev" value="462"/>
+<property name="tags" value="size_fullhd"/>
+<property name="tags_implied" value="size_hd"/>
+</properties>
+    </testcase>
+    <testcase name="inRange/19" value_param="(1920x1080, 16UC1)" status="run" time="0.08" classname="Size_MatType_inRange">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="12441600"/>
+<property name="bytesOut" value="4147200"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="654534"/>
+<property name="median" value="666740"/>
+<property name="gmean" value="669280"/>
+<property name="gstddev" value="0.011842"/>
+<property name="mean" value="669327"/>
+<property name="stddev" value="7960"/>
+<property name="tags" value="size_fullhd"/>
+<property name="tags_implied" value="size_hd"/>
+</properties>
+    </testcase>
+    <testcase name="inRange/20" value_param="(1920x1080, 16SC1)" status="run" time="0.079" classname="Size_MatType_inRange">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="12441600"/>
+<property name="bytesOut" value="4147200"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="648286"/>
+<property name="median" value="662308"/>
+<property name="gmean" value="663842"/>
+<property name="gstddev" value="0.011630"/>
+<property name="mean" value="663886"/>
+<property name="stddev" value="7745"/>
+<property name="tags" value="size_fullhd"/>
+<property name="tags_implied" value="size_hd"/>
+</properties>
+    </testcase>
+    <testcase name="inRange/21" value_param="(1920x1080, 32SC1)" status="run" time="0.181" classname="Size_MatType_inRange">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="24883200"/>
+<property name="bytesOut" value="8294400"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="1499060"/>
+<property name="median" value="1545817"/>
+<property name="gmean" value="1548656"/>
+<property name="gstddev" value="0.016235"/>
+<property name="mean" value="1548858"/>
+<property name="stddev" value="25241"/>
+<property name="tags" value="size_fullhd"/>
+<property name="tags_implied" value="size_hd"/>
+</properties>
+    </testcase>
+    <testcase name="inRange/22" value_param="(1920x1080, 32FC1)" status="run" time="0.178" classname="Size_MatType_inRange">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="24883200"/>
+<property name="bytesOut" value="8294400"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="1495654"/>
+<property name="median" value="1536988"/>
+<property name="gmean" value="1537607"/>
+<property name="gstddev" value="0.013238"/>
+<property name="mean" value="1537741"/>
+<property name="stddev" value="20384"/>
+<property name="tags" value="size_fullhd"/>
+<property name="tags_implied" value="size_hd"/>
+</properties>
+    </testcase>
+    <testcase name="inRange/23" value_param="(1920x1080, 32FC4)" status="run" time="0.869" classname="Size_MatType_inRange">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="99532800"/>
+<property name="bytesOut" value="33177600"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="7496593"/>
+<property name="median" value="7597709"/>
+<property name="gmean" value="7669498"/>
+<property name="gstddev" value="0.020408"/>
+<property name="mean" value="7671092"/>
+<property name="stddev" value="158644"/>
+<property name="tags" value="size_fullhd"/>
+<property name="tags_implied" value="size_hd"/>
+</properties>
+    </testcase>
+  </testsuite>
+  <testsuite name="Size_SrcDepth_DstChannels_merge" tests="60" failures="0" disabled="0" errors="0" time="14.256">
+    <testcase name="merge/0" value_param="(640x480, 8UC1, 2)" status="run" time="0.084" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="102443"/>
+<property name="median" value="102524"/>
+<property name="gmean" value="102631"/>
+<property name="gstddev" value="0.002689"/>
+<property name="mean" value="102631"/>
+<property name="stddev" value="277"/>
+</properties>
+    </testcase>
+    <testcase name="merge/1" value_param="(640x480, 8UC1, 3)" status="run" time="0.124" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="150008"/>
+<property name="median" value="150835"/>
+<property name="gmean" value="150967"/>
+<property name="gstddev" value="0.003530"/>
+<property name="mean" value="150968"/>
+<property name="stddev" value="534"/>
+</properties>
+    </testcase>
+    <testcase name="merge/2" value_param="(640x480, 8UC1, 4)" status="run" time="0.122" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="147046"/>
+<property name="median" value="147199"/>
+<property name="gmean" value="147431"/>
+<property name="gstddev" value="0.003306"/>
+<property name="mean" value="147432"/>
+<property name="stddev" value="489"/>
+</properties>
+    </testcase>
+    <testcase name="merge/3" value_param="(640x480, 16SC1, 2)" status="run" time="0.171" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="210311"/>
+<property name="median" value="210639"/>
+<property name="gmean" value="210756"/>
+<property name="gstddev" value="0.001942"/>
+<property name="mean" value="210757"/>
+<property name="stddev" value="410"/>
+</properties>
+    </testcase>
+    <testcase name="merge/4" value_param="(640x480, 16SC1, 3)" status="run" time="0.254" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="310763"/>
+<property name="median" value="312185"/>
+<property name="gmean" value="312442"/>
+<property name="gstddev" value="0.003539"/>
+<property name="mean" value="312444"/>
+<property name="stddev" value="1108"/>
+</properties>
+    </testcase>
+    <testcase name="merge/5" value_param="(640x480, 16SC1, 4)" status="run" time="0.254" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="310071"/>
+<property name="median" value="310649"/>
+<property name="gmean" value="310907"/>
+<property name="gstddev" value="0.002566"/>
+<property name="mean" value="310908"/>
+<property name="stddev" value="799"/>
+</properties>
+    </testcase>
+    <testcase name="merge/6" value_param="(640x480, 32SC1, 2)" status="run" time="0.381" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="419436"/>
+<property name="median" value="420561"/>
+<property name="gmean" value="426310"/>
+<property name="gstddev" value="0.028813"/>
+<property name="mean" value="426488"/>
+<property name="stddev" value="12630"/>
+</properties>
+    </testcase>
+    <testcase name="merge/7" value_param="(640x480, 32SC1, 3)" status="run" time="0.441" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="543075"/>
+<property name="median" value="546792"/>
+<property name="gmean" value="546918"/>
+<property name="gstddev" value="0.002543"/>
+<property name="mean" value="546920"/>
+<property name="stddev" value="1391"/>
+</properties>
+    </testcase>
+    <testcase name="merge/8" value_param="(640x480, 32SC1, 4)" status="run" time="0.502" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="619868"/>
+<property name="median" value="622936"/>
+<property name="gmean" value="622867"/>
+<property name="gstddev" value="0.002800"/>
+<property name="mean" value="622869"/>
+<property name="stddev" value="1745"/>
+</properties>
+    </testcase>
+    <testcase name="merge/9" value_param="(640x480, 32FC1, 2)" status="run" time="0.34" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="419420"/>
+<property name="median" value="420350"/>
+<property name="gmean" value="420745"/>
+<property name="gstddev" value="0.002398"/>
+<property name="mean" value="420746"/>
+<property name="stddev" value="1010"/>
+</properties>
+    </testcase>
+    <testcase name="merge/10" value_param="(640x480, 32FC1, 3)" status="run" time="0.442" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="543206"/>
+<property name="median" value="547827"/>
+<property name="gmean" value="548062"/>
+<property name="gstddev" value="0.003551"/>
+<property name="mean" value="548065"/>
+<property name="stddev" value="1947"/>
+</properties>
+    </testcase>
+    <testcase name="merge/11" value_param="(640x480, 32FC1, 4)" status="run" time="0.504" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="619927"/>
+<property name="median" value="623763"/>
+<property name="gmean" value="623712"/>
+<property name="gstddev" value="0.003172"/>
+<property name="mean" value="623715"/>
+<property name="stddev" value="1980"/>
+</properties>
+    </testcase>
+    <testcase name="merge/12" value_param="(640x480, 64FC1, 2)" status="run" time="0.716" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="888291"/>
+<property name="median" value="892027"/>
+<property name="gmean" value="892015"/>
+<property name="gstddev" value="0.002143"/>
+<property name="mean" value="892017"/>
+<property name="stddev" value="1912"/>
+</properties>
+    </testcase>
+    <testcase name="merge/13" value_param="(640x480, 64FC1, 3)" status="run" time="0.854" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="1057027"/>
+<property name="median" value="1062614"/>
+<property name="gmean" value="1062778"/>
+<property name="gstddev" value="0.002689"/>
+<property name="mean" value="1062782"/>
+<property name="stddev" value="2859"/>
+</properties>
+    </testcase>
+    <testcase name="merge/14" value_param="(640x480, 64FC1, 4)" status="run" time="0.914" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="1128027"/>
+<property name="median" value="1133462"/>
+<property name="gmean" value="1133845"/>
+<property name="gstddev" value="0.002477"/>
+<property name="mean" value="1133848"/>
+<property name="stddev" value="2809"/>
+</properties>
+    </testcase>
+    <testcase name="merge/15" value_param="(1280x720, 8UC1, 2)" status="run" time="0.036" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="303811"/>
+<property name="median" value="304392"/>
+<property name="gmean" value="304474"/>
+<property name="gstddev" value="0.001734"/>
+<property name="mean" value="304474"/>
+<property name="stddev" value="530"/>
+<property name="tags" value="size_hd"/>
+<property name="tags_implied" value=""/>
+</properties>
+    </testcase>
+    <testcase name="merge/16" value_param="(1280x720, 8UC1, 3)" status="run" time="0.054" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="448291"/>
+<property name="median" value="450338"/>
+<property name="gmean" value="450484"/>
+<property name="gstddev" value="0.003157"/>
+<property name="mean" value="450486"/>
+<property name="stddev" value="1425"/>
+<property name="tags" value="size_hd"/>
+<property name="tags_implied" value=""/>
+</properties>
+    </testcase>
+    <testcase name="merge/17" value_param="(1280x720, 8UC1, 4)" status="run" time="0.055" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="436839"/>
+<property name="median" value="437942"/>
+<property name="gmean" value="438111"/>
+<property name="gstddev" value="0.002314"/>
+<property name="mean" value="438112"/>
+<property name="stddev" value="1017"/>
+<property name="tags" value="size_hd"/>
+<property name="tags_implied" value=""/>
+</properties>
+    </testcase>
+    <testcase name="merge/18" value_param="(1280x720, 16SC1, 2)" status="run" time="0.069" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="626949"/>
+<property name="median" value="627922"/>
+<property name="gmean" value="628472"/>
+<property name="gstddev" value="0.002229"/>
+<property name="mean" value="628474"/>
+<property name="stddev" value="1404"/>
+<property name="tags" value="size_hd"/>
+<property name="tags_implied" value=""/>
+</properties>
+    </testcase>
+    <testcase name="merge/19" value_param="(1280x720, 16SC1, 3)" status="run" time="0.104" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="929939"/>
+<property name="median" value="941248"/>
+<property name="gmean" value="942122"/>
+<property name="gstddev" value="0.007208"/>
+<property name="mean" value="942146"/>
+<property name="stddev" value="6803"/>
+<property name="tags" value="size_hd"/>
+<property name="tags_implied" value=""/>
+</properties>
+    </testcase>
+    <testcase name="merge/20" value_param="(1280x720, 16SC1, 4)" status="run" time="0.107" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="927308"/>
+<property name="median" value="929594"/>
+<property name="gmean" value="932395"/>
+<property name="gstddev" value="0.006220"/>
+<property name="mean" value="932413"/>
+<property name="stddev" value="5827"/>
+<property name="tags" value="size_hd"/>
+<property name="tags_implied" value=""/>
+</properties>
+    </testcase>
+    <testcase name="merge/21" value_param="(1280x720, 32SC1, 2)" status="run" time="0.132" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="1256341"/>
+<property name="median" value="1259339"/>
+<property name="gmean" value="1263282"/>
+<property name="gstddev" value="0.005388"/>
+<property name="mean" value="1263300"/>
+<property name="stddev" value="6824"/>
+<property name="tags" value="size_hd"/>
+<property name="tags_implied" value=""/>
+</properties>
+    </testcase>
+    <testcase name="merge/22" value_param="(1280x720, 32SC1, 3)" status="run" time="0.173" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="1624503"/>
+<property name="median" value="1641746"/>
+<property name="gmean" value="1643750"/>
+<property name="gstddev" value="0.006787"/>
+<property name="mean" value="1643788"/>
+<property name="stddev" value="11180"/>
+<property name="tags" value="size_hd"/>
+<property name="tags_implied" value=""/>
+</properties>
+    </testcase>
+    <testcase name="merge/23" value_param="(1280x720, 32SC1, 4)" status="run" time="0.197" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="1853568"/>
+<property name="median" value="1869232"/>
+<property name="gmean" value="1867996"/>
+<property name="gstddev" value="0.007938"/>
+<property name="mean" value="1868054"/>
+<property name="stddev" value="14882"/>
+<property name="tags" value="size_hd"/>
+<property name="tags_implied" value=""/>
+</properties>
+    </testcase>
+    <testcase name="merge/24" value_param="(1280x720, 32FC1, 2)" status="run" time="0.134" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="1255993"/>
+<property name="median" value="1259072"/>
+<property name="gmean" value="1263179"/>
+<property name="gstddev" value="0.005601"/>
+<property name="mean" value="1263198"/>
+<property name="stddev" value="7093"/>
+<property name="tags" value="size_hd"/>
+<property name="tags_implied" value=""/>
+</properties>
+    </testcase>
+    <testcase name="merge/25" value_param="(1280x720, 32FC1, 3)" status="run" time="0.175" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="1623821"/>
+<property name="median" value="1643662"/>
+<property name="gmean" value="1645571"/>
+<property name="gstddev" value="0.007943"/>
+<property name="mean" value="1645623"/>
+<property name="stddev" value="13103"/>
+<property name="tags" value="size_hd"/>
+<property name="tags_implied" value=""/>
+</properties>
+    </testcase>
+    <testcase name="merge/26" value_param="(1280x720, 32FC1, 4)" status="run" time="0.2" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="1853382"/>
+<property name="median" value="1865956"/>
+<property name="gmean" value="1865935"/>
+<property name="gstddev" value="0.007302"/>
+<property name="mean" value="1865984"/>
+<property name="stddev" value="13697"/>
+<property name="tags" value="size_hd"/>
+<property name="tags_implied" value=""/>
+</properties>
+    </testcase>
+    <testcase name="merge/27" value_param="(1280x720, 64FC1, 2)" status="run" time="0.276" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="2663924"/>
+<property name="median" value="2683172"/>
+<property name="gmean" value="2686112"/>
+<property name="gstddev" value="0.006113"/>
+<property name="mean" value="2686161"/>
+<property name="stddev" value="16454"/>
+<property name="tags" value="size_hd"/>
+<property name="tags_implied" value=""/>
+</properties>
+    </testcase>
+    <testcase name="merge/28" value_param="(1280x720, 64FC1, 3)" status="run" time="0.354" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="3166414"/>
+<property name="median" value="3520885"/>
+<property name="gmean" value="3413686"/>
+<property name="gstddev" value="0.061592"/>
+<property name="mean" value="3420088"/>
+<property name="stddev" value="210193"/>
+<property name="tags" value="size_hd"/>
+<property name="tags_implied" value=""/>
+</properties>
+    </testcase>
+    <testcase name="merge/29" value_param="(1280x720, 64FC1, 4)" status="run" time="0.358" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="3378198"/>
+<property name="median" value="3412000"/>
+<property name="gmean" value="3416984"/>
+<property name="gstddev" value="0.007077"/>
+<property name="mean" value="3417069"/>
+<property name="stddev" value="24229"/>
+<property name="tags" value="size_hd"/>
+<property name="tags_implied" value=""/>
+</properties>
+    </testcase>
+    <testcase name="merge/30" value_param="(1920x1080, 8UC1, 2)" status="run" time="0.081" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="681253"/>
+<property name="median" value="682042"/>
+<property name="gmean" value="682569"/>
+<property name="gstddev" value="0.002262"/>
+<property name="mean" value="682571"/>
+<property name="stddev" value="1548"/>
+<property name="tags" value="size_fullhd"/>
+<property name="tags_implied" value="size_hd"/>
+</properties>
+    </testcase>
+    <testcase name="merge/31" value_param="(1920x1080, 8UC1, 3)" status="run" time="0.121" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="1008259"/>
+<property name="median" value="1014126"/>
+<property name="gmean" value="1016703"/>
+<property name="gstddev" value="0.006728"/>
+<property name="mean" value="1016725"/>
+<property name="stddev" value="6864"/>
+<property name="tags" value="size_fullhd"/>
+<property name="tags_implied" value="size_hd"/>
+</properties>
+    </testcase>
+    <testcase name="merge/32" value_param="(1920x1080, 8UC1, 4)" status="run" time="0.125" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="983800"/>
+<property name="median" value="985157"/>
+<property name="gmean" value="988376"/>
+<property name="gstddev" value="0.006450"/>
+<property name="mean" value="988397"/>
+<property name="stddev" value="6406"/>
+<property name="tags" value="size_fullhd"/>
+<property name="tags_implied" value="size_hd"/>
+</properties>
+    </testcase>
+    <testcase name="merge/33" value_param="(1920x1080, 16SC1, 2)" status="run" time="0.157" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="1412882"/>
+<property name="median" value="1418192"/>
+<property name="gmean" value="1423474"/>
+<property name="gstddev" value="0.007161"/>
+<property name="mean" value="1423510"/>
+<property name="stddev" value="10238"/>
+<property name="tags" value="size_fullhd"/>
+<property name="tags_implied" value="size_hd"/>
+</properties>
+    </testcase>
+    <testcase name="merge/34" value_param="(1920x1080, 16SC1, 3)" status="run" time="0.238" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="2130050"/>
+<property name="median" value="2156656"/>
+<property name="gmean" value="2158986"/>
+<property name="gstddev" value="0.006992"/>
+<property name="mean" value="2159039"/>
+<property name="stddev" value="15126"/>
+<property name="tags" value="size_fullhd"/>
+<property name="tags_implied" value="size_hd"/>
+</properties>
+    </testcase>
+    <testcase name="merge/35" value_param="(1920x1080, 16SC1, 4)" status="run" time="0.246" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="2137222"/>
+<property name="median" value="2158790"/>
+<property name="gmean" value="2161184"/>
+<property name="gstddev" value="0.007760"/>
+<property name="mean" value="2161248"/>
+<property name="stddev" value="16847"/>
+<property name="tags" value="size_fullhd"/>
+<property name="tags_implied" value="size_hd"/>
+</properties>
+    </testcase>
+    <testcase name="merge/36" value_param="(1920x1080, 32SC1, 2)" status="run" time="0.304" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="2873348"/>
+<property name="median" value="2906863"/>
+<property name="gmean" value="2912158"/>
+<property name="gstddev" value="0.008237"/>
+<property name="mean" value="2912256"/>
+<property name="stddev" value="24059"/>
+<property name="tags" value="size_fullhd"/>
+<property name="tags_implied" value="size_hd"/>
+</properties>
+    </testcase>
+    <testcase name="merge/37" value_param="(1920x1080, 32SC1, 3)" status="run" time="0.403" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="3791569"/>
+<property name="median" value="3841400"/>
+<property name="gmean" value="3845936"/>
+<property name="gstddev" value="0.008373"/>
+<property name="mean" value="3846069"/>
+<property name="stddev" value="32352"/>
+<property name="tags" value="size_fullhd"/>
+<property name="tags_implied" value="size_hd"/>
+</properties>
+    </testcase>
+    <testcase name="merge/38" value_param="(1920x1080, 32SC1, 4)" status="run" time="0.476" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="4380632"/>
+<property name="median" value="4452711"/>
+<property name="gmean" value="4458099"/>
+<property name="gstddev" value="0.012870"/>
+<property name="mean" value="4458466"/>
+<property name="stddev" value="57784"/>
+<property name="tags" value="size_fullhd"/>
+<property name="tags_implied" value="size_hd"/>
+</properties>
+    </testcase>
+    <testcase name="merge/39" value_param="(1920x1080, 32FC1, 2)" status="run" time="0.307" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="2876410"/>
+<property name="median" value="2898962"/>
+<property name="gmean" value="2903772"/>
+<property name="gstddev" value="0.005618"/>
+<property name="mean" value="2903817"/>
+<property name="stddev" value="16330"/>
+<property name="tags" value="size_fullhd"/>
+<property name="tags_implied" value="size_hd"/>
+</properties>
+    </testcase>
+    <testcase name="merge/40" value_param="(1920x1080, 32FC1, 3)" status="run" time="0.409" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="3801456"/>
+<property name="median" value="3841483"/>
+<property name="gmean" value="3850899"/>
+<property name="gstddev" value="0.009728"/>
+<property name="mean" value="3851080"/>
+<property name="stddev" value="37743"/>
+<property name="tags" value="size_fullhd"/>
+<property name="tags_implied" value="size_hd"/>
+</properties>
+    </testcase>
+    <testcase name="merge/41" value_param="(1920x1080, 32FC1, 4)" status="run" time="0.483" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="4397674"/>
+<property name="median" value="4496076"/>
+<property name="gmean" value="4498079"/>
+<property name="gstddev" value="0.011292"/>
+<property name="mean" value="4498363"/>
+<property name="stddev" value="50938"/>
+<property name="tags" value="size_fullhd"/>
+<property name="tags_implied" value="size_hd"/>
+</properties>
+    </testcase>
+    <testcase name="merge/42" value_param="(1920x1080, 64FC1, 2)" status="run" time="0.635" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="6094231"/>
+<property name="median" value="6144014"/>
+<property name="gmean" value="6145522"/>
+<property name="gstddev" value="0.006071"/>
+<property name="mean" value="6145635"/>
+<property name="stddev" value="37470"/>
+<property name="tags" value="size_fullhd"/>
+<property name="tags_implied" value="size_hd"/>
+</properties>
+    </testcase>
+    <testcase name="merge/43" value_param="(1920x1080, 64FC1, 3)" status="run" time="0.771" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="7351472"/>
+<property name="median" value="7423573"/>
+<property name="gmean" value="7423812"/>
+<property name="gstddev" value="0.004668"/>
+<property name="mean" value="7423892"/>
+<property name="stddev" value="34658"/>
+<property name="tags" value="size_fullhd"/>
+<property name="tags_implied" value="size_hd"/>
+</properties>
+    </testcase>
+    <testcase name="merge/44" value_param="(1920x1080, 64FC1, 4)" status="run" time="0.811" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="7653050"/>
+<property name="median" value="7770555"/>
+<property name="gmean" value="7765636"/>
+<property name="gstddev" value="0.004844"/>
+<property name="mean" value="7765726"/>
+<property name="stddev" value="37561"/>
+<property name="tags" value="size_fullhd"/>
+<property name="tags_implied" value="size_hd"/>
+</properties>
+    </testcase>
+    <testcase name="merge/45" value_param="(127x61, 8UC1, 2)" status="run" time="0.002" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="3015"/>
+<property name="median" value="3033"/>
+<property name="gmean" value="3033"/>
+<property name="gstddev" value="0.002192"/>
+<property name="mean" value="3033"/>
+<property name="stddev" value="7"/>
+</properties>
+    </testcase>
+    <testcase name="merge/46" value_param="(127x61, 8UC1, 3)" status="run" time="0.004" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="4327"/>
+<property name="median" value="4349"/>
+<property name="gmean" value="4348"/>
+<property name="gstddev" value="0.001867"/>
+<property name="mean" value="4348"/>
+<property name="stddev" value="8"/>
+</properties>
+    </testcase>
+    <testcase name="merge/47" value_param="(127x61, 8UC1, 4)" status="run" time="0.003" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="4309"/>
+<property name="median" value="4328"/>
+<property name="gmean" value="4328"/>
+<property name="gstddev" value="0.001661"/>
+<property name="mean" value="4328"/>
+<property name="stddev" value="7"/>
+</properties>
+    </testcase>
+    <testcase name="merge/48" value_param="(127x61, 16SC1, 2)" status="run" time="0.005" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="5761"/>
+<property name="median" value="5785"/>
+<property name="gmean" value="5784"/>
+<property name="gstddev" value="0.001513"/>
+<property name="mean" value="5784"/>
+<property name="stddev" value="9"/>
+</properties>
+    </testcase>
+    <testcase name="merge/49" value_param="(127x61, 16SC1, 3)" status="run" time="0.007" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="8251"/>
+<property name="median" value="8274"/>
+<property name="gmean" value="8276"/>
+<property name="gstddev" value="0.001684"/>
+<property name="mean" value="8276"/>
+<property name="stddev" value="14"/>
+</properties>
+    </testcase>
+    <testcase name="merge/50" value_param="(127x61, 16SC1, 4)" status="run" time="0.007" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="8402"/>
+<property name="median" value="8426"/>
+<property name="gmean" value="8426"/>
+<property name="gstddev" value="0.001036"/>
+<property name="mean" value="8426"/>
+<property name="stddev" value="9"/>
+</properties>
+    </testcase>
+    <testcase name="merge/51" value_param="(127x61, 32SC1, 2)" status="run" time="0.009" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="11016"/>
+<property name="median" value="11046"/>
+<property name="gmean" value="11047"/>
+<property name="gstddev" value="0.001115"/>
+<property name="mean" value="11047"/>
+<property name="stddev" value="12"/>
+</properties>
+    </testcase>
+    <testcase name="merge/52" value_param="(127x61, 32SC1, 3)" status="run" time="0.011" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="14119"/>
+<property name="median" value="14146"/>
+<property name="gmean" value="14146"/>
+<property name="gstddev" value="0.000861"/>
+<property name="mean" value="14146"/>
+<property name="stddev" value="12"/>
+</properties>
+    </testcase>
+    <testcase name="merge/53" value_param="(127x61, 32SC1, 4)" status="run" time="0.014" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="16168"/>
+<property name="median" value="16204"/>
+<property name="gmean" value="16204"/>
+<property name="gstddev" value="0.000910"/>
+<property name="mean" value="16204"/>
+<property name="stddev" value="15"/>
+</properties>
+    </testcase>
+    <testcase name="merge/54" value_param="(127x61, 32FC1, 2)" status="run" time="0.009" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="11031"/>
+<property name="median" value="11056"/>
+<property name="gmean" value="11057"/>
+<property name="gstddev" value="0.000924"/>
+<property name="mean" value="11057"/>
+<property name="stddev" value="10"/>
+</properties>
+    </testcase>
+    <testcase name="merge/55" value_param="(127x61, 32FC1, 3)" status="run" time="0.011" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="14113"/>
+<property name="median" value="14137"/>
+<property name="gmean" value="14138"/>
+<property name="gstddev" value="0.000771"/>
+<property name="mean" value="14138"/>
+<property name="stddev" value="11"/>
+</properties>
+    </testcase>
+    <testcase name="merge/56" value_param="(127x61, 32FC1, 4)" status="run" time="0.013" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="16170"/>
+<property name="median" value="16203"/>
+<property name="gmean" value="16209"/>
+<property name="gstddev" value="0.002096"/>
+<property name="mean" value="16209"/>
+<property name="stddev" value="34"/>
+</properties>
+    </testcase>
+    <testcase name="merge/57" value_param="(127x61, 64FC1, 2)" status="run" time="0.019" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="22822"/>
+<property name="median" value="22864"/>
+<property name="gmean" value="22865"/>
+<property name="gstddev" value="0.000620"/>
+<property name="mean" value="22865"/>
+<property name="stddev" value="14"/>
+</properties>
+    </testcase>
+    <testcase name="merge/58" value_param="(127x61, 64FC1, 3)" status="run" time="0.021" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="26652"/>
+<property name="median" value="26742"/>
+<property name="gmean" value="26749"/>
+<property name="gstddev" value="0.001999"/>
+<property name="mean" value="26749"/>
+<property name="stddev" value="54"/>
+</properties>
+    </testcase>
+    <testcase name="merge/59" value_param="(127x61, 64FC1, 4)" status="run" time="0.024" classname="Size_SrcDepth_DstChannels_merge">
+<properties>
+<property name="ocl_memory_usage" value="0"/>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="100"/>
+<property name="outliers" value="8"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="29563"/>
+<property name="median" value="29619"/>
+<property name="gmean" value="29621"/>
+<property name="gstddev" value="0.000714"/>
+<property name="mean" value="29621"/>
+<property name="stddev" value="21"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

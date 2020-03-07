@@ -1,0 +1,51 @@
+From d61ddeb1a832be37b493f597862def6e017afb68 Mon Sep 17 00:00:00 2001
+From: Sayed Adel <seiko@imavr.com>
+Date: Wed, 4 Mar 2020 18:55:52 +0000
+Subject: [PATCH] use casting and deference for unaligned memory load
+
+---
+ .../include/opencv2/core/hal/intrin_vsx.hpp   | 27 +++++++++++++++++--
+ 1 file changed, 25 insertions(+), 2 deletions(-)
+
+diff --git a/modules/core/include/opencv2/core/hal/intrin_vsx.hpp b/modules/core/include/opencv2/core/hal/intrin_vsx.hpp
+index 6e8b439182..8343f127c8 100644
+--- a/modules/core/include/opencv2/core/hal/intrin_vsx.hpp
++++ b/modules/core/include/opencv2/core/hal/intrin_vsx.hpp
+@@ -245,9 +245,32 @@ OPENCV_HAL_IMPL_VSX_INITVEC(v_int64x2, int64, s64, vec_dword2)
+ OPENCV_HAL_IMPL_VSX_INITVEC(v_float32x4, float, f32, vec_float4)
+ OPENCV_HAL_IMPL_VSX_INITVEC(v_float64x2, double, f64, vec_double2)
+ 
++inline v_uint8x16 v_load(const uchar* ptr)
++{ return v_uint8x16(*((vec_uchar16*)ptr)); }
++inline v_int8x16 v_load(const schar* ptr)
++{ return v_int8x16(*((vec_char16*)ptr)); }
++
++inline v_uint16x8 v_load(const ushort* ptr)
++{ return v_uint16x8(*((vec_ushort8*)ptr)); }
++inline v_int16x8 v_load(const short* ptr)
++{ return v_int16x8(*((vec_short8*)ptr)); }
++
++inline v_uint32x4 v_load(const uint* ptr)
++{ return v_uint32x4(*((vec_uint4*)ptr)); }
++inline v_int32x4 v_load(const int* ptr)
++{ return v_int32x4(*((vec_int4*)ptr)); }
++
++inline v_uint64x2 v_load(const uint64* ptr)
++{ return v_uint64x2(*((vec_udword2*)ptr)); }
++inline v_int64x2 v_load(const int64* ptr)
++{ return v_int64x2(*((vec_dword2*)ptr)); }
++
++inline v_float32x4 v_load(const float* ptr)
++{ return v_float32x4(*((vec_float4*)ptr)); }
++inline v_float64x2 v_load(const double* ptr)
++{ return v_float64x2(*((vec_double2*)ptr)); }
++
+ #define OPENCV_HAL_IMPL_VSX_LOADSTORE_C(_Tpvec, _Tp, ld, ld_a, st, st_a)    \
+-inline _Tpvec v_load(const _Tp* ptr)                                        \
+-{ return _Tpvec(ld(0, ptr)); }                                              \
+ inline _Tpvec v_load_aligned(VSX_UNUSED(const _Tp* ptr))                    \
+ { return _Tpvec(ld_a(0, ptr)); }                                            \
+ inline _Tpvec v_load_low(const _Tp* ptr)                                    \
+-- 
+2.19.1
+

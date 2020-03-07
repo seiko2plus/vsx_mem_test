@@ -1,0 +1,64 @@
+From b0410ce6f2ab5b51c940154ebe62fc970bfb3a73 Mon Sep 17 00:00:00 2001
+From: Sayed Adel <seiko@imavr.com>
+Date: Fri, 6 Mar 2020 20:30:19 +0000
+Subject: [PATCH] using cast & dereference for unaligned store
+
+---
+ .../include/opencv2/core/hal/intrin_vsx.hpp   | 29 +++++++++++++++++--
+ 1 file changed, 26 insertions(+), 3 deletions(-)
+
+diff --git a/modules/core/include/opencv2/core/hal/intrin_vsx.hpp b/modules/core/include/opencv2/core/hal/intrin_vsx.hpp
+index 6e8b439182..14e7c8b800 100644
+--- a/modules/core/include/opencv2/core/hal/intrin_vsx.hpp
++++ b/modules/core/include/opencv2/core/hal/intrin_vsx.hpp
+@@ -245,6 +245,31 @@ OPENCV_HAL_IMPL_VSX_INITVEC(v_int64x2, int64, s64, vec_dword2)
+ OPENCV_HAL_IMPL_VSX_INITVEC(v_float32x4, float, f32, vec_float4)
+ OPENCV_HAL_IMPL_VSX_INITVEC(v_float64x2, double, f64, vec_double2)
+ 
++inline void v_store(uchar* ptr, const v_uint8x16& a)
++{ *((vec_uchar16*)ptr) = a.val; }
++inline void v_store(schar* ptr, const v_int8x16& a)
++{ *((vec_char16*)ptr) = a.val; }
++
++inline void v_store(ushort* ptr, const v_uint16x8& a)
++{ *((vec_ushort8*)ptr) = a.val; }
++inline void v_store(short* ptr, const v_int16x8& a)
++{ *((vec_short8*)ptr) = a.val; }
++
++inline void v_store(uint* ptr, const v_uint32x4& a)
++{ *((vec_uint4*)ptr) = a.val; }
++inline void v_store(int* ptr, const v_int32x4& a)
++{ *((vec_int4*)ptr) = a.val; }
++
++inline void v_store(uint64* ptr, const v_uint64x2& a)
++{ *((vec_udword2*)ptr) = a.val; }
++inline void v_store(int64* ptr, const v_int64x2& a)
++{ *((vec_dword2*)ptr) = a.val; }
++
++inline void v_store(float* ptr, const v_float32x4& a)
++{ *((vec_float4*)ptr) = a.val; }
++inline void v_store(double* ptr, const v_float64x2& a)
++{ *((vec_double2*)ptr) = a.val; }
++
+ #define OPENCV_HAL_IMPL_VSX_LOADSTORE_C(_Tpvec, _Tp, ld, ld_a, st, st_a)    \
+ inline _Tpvec v_load(const _Tp* ptr)                                        \
+ { return _Tpvec(ld(0, ptr)); }                                              \
+@@ -254,14 +279,12 @@ inline _Tpvec v_load_low(const _Tp* ptr)                                    \
+ { return _Tpvec(vec_ld_l8(ptr)); }                                          \
+ inline _Tpvec v_load_halves(const _Tp* ptr0, const _Tp* ptr1)               \
+ { return _Tpvec(vec_mergesqh(vec_ld_l8(ptr0), vec_ld_l8(ptr1))); }          \
+-inline void v_store(_Tp* ptr, const _Tpvec& a)                              \
+-{ st(a.val, 0, ptr); }                                                      \
+ inline void v_store_aligned(VSX_UNUSED(_Tp* ptr), const _Tpvec& a)          \
+ { st_a(a.val, 0, ptr); }                                                    \
+ inline void v_store_aligned_nocache(VSX_UNUSED(_Tp* ptr), const _Tpvec& a)  \
+ { st_a(a.val, 0, ptr); }                                                    \
+ inline void v_store(_Tp* ptr, const _Tpvec& a, hal::StoreMode mode)         \
+-{ if(mode == hal::STORE_UNALIGNED) st(a.val, 0, ptr); else st_a(a.val, 0, ptr); } \
++{ if(mode == hal::STORE_UNALIGNED) v_store(ptr, a); else st_a(a.val, 0, ptr); } \
+ inline void v_store_low(_Tp* ptr, const _Tpvec& a)                          \
+ { vec_st_l8(a.val, ptr); }                                                  \
+ inline void v_store_high(_Tp* ptr, const _Tpvec& a)                         \
+-- 
+2.19.1
+
