@@ -1,11 +1,11 @@
 ### Testing GCC/Clang compilers on IBM/ISA(2.07, 3.00) little-endian mode, to determine the most suitable method for performing vector unaligned load/store with an unaligned memory address.
 
-#### The environment
-
 The tests were implemented on the OpenCV library since the library contains many optimized SIMD kernels based on VSX/Altivec C intrinsics, also because its easier since OpenCV don't use these intrinsics directly but mapped intrinsics([universal intrinsics](https://docs.opencv.org/3.4/df/d91/group__core__hal__intrin.html)).
 
-<details>
-<summary>CPU</summary>
+#### The environment
+
+##### CPU
+
 ```
 Architecture:        ppc64le
 Byte Order:          Little Endian
@@ -33,26 +33,16 @@ model		: IBM pSeries (emulated by qemu)
 machine		: CHRP IBM pSeries (emulated by qemu)
 MMU		: Radix
 ```
-</details>
-
-<details>
-<summary>OS</summary>
-```
-Linux osuosl-5 4.19.0-2-powerpc64le #1 SMP Debian 4.19.16-1 (2019-01-17) ppc64le GNU/Linux
-gcc version 8.3.0 (Ubuntu 8.3.0-6ubuntu1~18.10.1)
-Ubuntu 18.10 (cosmic)
-```
-</details>
 
 ---
 
 #### The purposed methods
 
 - load via intrinsics `vec_xl/vec_vsx_ld` : the default in OpenCV
-- load via `cast & dereference`: e.g. `__vector float load = *((__vector float *)ptr)`
-- load via `vector assignment` :  e.g. `__vector float load = (__vector float){ptr[0], ptr[1], ptr[3], ptr[4]}`
+- load via `cast & dereference`: e.g. `__vector float load = *((__vector float *)ptr)`, [deref.patch](https://github.com/seiko2plus/vsx_mem_test/blob/master/patches/deref.patch)
+- load via `vector assignment` :  e.g. `__vector float load = (__vector float){ptr[0], ptr[1], ptr[3], ptr[4]}`, [assign.patch](https://github.com/seiko2plus/vsx_mem_test/blob/master/patches/assign.patch)
 - store via intrinsics `vec_xst/vec_vsx_st` : the default in OpenCV
-- store via `cast & dereference`: e.g. `*((__vector float *)ptr) = vector`
+- store via `cast & dereference`: e.g. `*((__vector float *)ptr) = vector`, [store-deref.patch](https://github.com/seiko2plus/vsx_mem_test/blob/master/patches/store-deref.patch)
 
 ---
 
@@ -74,7 +64,7 @@ TODO
 
 ```Bash
 # make sure that git and docker installed in your Power machine
-git clone https://github.com/seiko2plus/just4share/reports/vsx_mem
+git clone https://github.com/seiko2plus/vsx_mem_test
 # build docker image and create the container
 cd vsx_mem && ./deploy.sh
 # now check the environment variables that used for configuring the test
