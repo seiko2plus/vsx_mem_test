@@ -111,6 +111,19 @@ function build_clang {
     run_tests $build_path $2
 }
 
+function dump_sample {
+    for cpu in "power8" "power9"; do
+        flags="-O3 -mcpu=${cpu} -c ${2}"
+        obj_path=${sample}.${cpu}_${1}
+        ${1} $flags -o $obj_path.o &> /dev/null
+        if [ -f $obj_path.o ]; then
+            objdump -D $obj_path.o &> $obj_path.asm
+        else
+            echo "skip dumping ${2}, flag '-mcpu=${cpu}' not supported by ${1}"
+        fi
+    done
+}
+
 for ver in "${GCC_VERSIONS[@]}"; do
     build_gcc $ver
     for patch in "${PATCHES[@]}"; do
@@ -135,5 +148,17 @@ for ver in "${CLANG_VERSIONS[@]}"; do
     build_names=$(printf "%s_clang_${ver}\n" "${PATCHES[@]/.patch/}")
     build_names="clang_${ver} $build_names"
     generate_report $build_names
+done
+
+
+echo "Compiling and dumping C samples"
+for sample in /test/samples/*.c; do
+    flags="-O3 -mcpu=${cpu} -c ${sample}"
+    for ver in "${GCC_VERSIONS[@]}"; do
+        dump_sample gcc-${ver} $sample
+    done
+    for ver in "${CLANG_VERSIONS[@]}"; do
+        dump_sample clang-${ver} $sample
+    done
 done
 
