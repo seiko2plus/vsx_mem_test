@@ -4,201 +4,193 @@
 
 Disassembly of section .text:
 
-0000000000000000 <INTRIN_ushort>:
-   0:	00 00 26 2c 	cmpdi   r6,0
-   4:	20 00 82 4d 	beqlr   
-   8:	a4 0f c9 78 	rldicr  r9,r6,1,62
-   c:	14 4a 63 7c 	add     r3,r3,r9
-  10:	00 00 20 39 	li      r9,0
+0000000000000000 <INTRIN_schar>:
+   0:	00 00 a6 2f 	cmpdi   cr7,r6,0
+   4:	14 32 63 7c 	add     r3,r3,r6
+   8:	00 00 20 39 	li      r9,0
+   c:	20 00 9e 4d 	beqlr   cr7
+  10:	00 00 00 60 	nop
   14:	00 00 00 60 	nop
   18:	00 00 00 60 	nop
   1c:	00 00 42 60 	ori     r2,r2,0
-  20:	99 26 00 7c 	lxvd2x  vs32,0,r4
-  24:	99 2e 20 7c 	lxvd2x  vs33,0,r5
-  28:	08 00 29 39 	addi    r9,r9,8
-  2c:	10 00 84 38 	addi    r4,r4,16
-  30:	40 48 a6 7f 	cmpld   cr7,r6,r9
-  34:	10 00 a5 38 	addi    r5,r5,16
-  38:	40 08 00 10 	vadduhm v0,v0,v1
-  3c:	99 1f 00 7c 	stxvd2x vs32,0,r3
-  40:	e0 ff 9d 41 	bgt     cr7,20 <INTRIN_ushort+0x20>
-  44:	20 00 80 4e 	blr
+  20:	99 4e 04 7c 	lxvd2x  vs32,r4,r9
+  24:	99 4e 25 7c 	lxvd2x  vs33,r5,r9
+  28:	10 00 29 39 	addi    r9,r9,16
+  2c:	40 48 a6 7f 	cmpld   cr7,r6,r9
+  30:	00 08 00 10 	vaddubm v0,v0,v1
+  34:	99 1f 00 7c 	stxvd2x vs32,0,r3
+  38:	e8 ff 9d 41 	bgt     cr7,20 <INTRIN_schar+0x20>
+  3c:	20 00 80 4e 	blr
 	...
-  54:	00 00 00 60 	nop
-  58:	00 00 00 60 	nop
-  5c:	00 00 42 60 	ori     r2,r2,0
+  4c:	00 00 42 60 	ori     r2,r2,0
 
-0000000000000060 <INTRIN_short>:
-  60:	00 00 26 2c 	cmpdi   r6,0
-  64:	20 00 82 4d 	beqlr   
-  68:	a4 0f c9 78 	rldicr  r9,r6,1,62
-  6c:	14 4a 63 7c 	add     r3,r3,r9
-  70:	00 00 20 39 	li      r9,0
-  74:	00 00 00 60 	nop
-  78:	00 00 00 60 	nop
-  7c:	00 00 42 60 	ori     r2,r2,0
-  80:	99 26 00 7c 	lxvd2x  vs32,0,r4
-  84:	99 2e 20 7c 	lxvd2x  vs33,0,r5
-  88:	08 00 29 39 	addi    r9,r9,8
-  8c:	10 00 84 38 	addi    r4,r4,16
-  90:	40 48 a6 7f 	cmpld   cr7,r6,r9
-  94:	10 00 a5 38 	addi    r5,r5,16
-  98:	40 08 00 10 	vadduhm v0,v0,v1
-  9c:	99 1f 00 7c 	stxvd2x vs32,0,r3
-  a0:	e0 ff 9d 41 	bgt     cr7,80 <INTRIN_short+0x20>
-  a4:	20 00 80 4e 	blr
+0000000000000050 <INTRIN_short>:
+  50:	00 00 26 2c 	cmpdi   r6,0
+  54:	20 00 82 4d 	beqlr   
+  58:	a4 0f c9 78 	rldicr  r9,r6,1,62
+  5c:	14 4a 63 7c 	add     r3,r3,r9
+  60:	00 00 20 39 	li      r9,0
+  64:	00 00 00 60 	nop
+  68:	00 00 00 60 	nop
+  6c:	00 00 42 60 	ori     r2,r2,0
+  70:	99 26 00 7c 	lxvd2x  vs32,0,r4
+  74:	99 2e 20 7c 	lxvd2x  vs33,0,r5
+  78:	08 00 29 39 	addi    r9,r9,8
+  7c:	10 00 84 38 	addi    r4,r4,16
+  80:	40 48 a6 7f 	cmpld   cr7,r6,r9
+  84:	10 00 a5 38 	addi    r5,r5,16
+  88:	40 08 00 10 	vadduhm v0,v0,v1
+  8c:	99 1f 00 7c 	stxvd2x vs32,0,r3
+  90:	e0 ff 9d 41 	bgt     cr7,70 <INTRIN_short+0x20>
+  94:	20 00 80 4e 	blr
 	...
-  b4:	00 00 00 60 	nop
-  b8:	00 00 00 60 	nop
-  bc:	00 00 42 60 	ori     r2,r2,0
+  a4:	00 00 00 60 	nop
+  a8:	00 00 00 60 	nop
+  ac:	00 00 42 60 	ori     r2,r2,0
 
-00000000000000c0 <INTRIN_uint>:
-  c0:	00 00 26 2c 	cmpdi   r6,0
-  c4:	20 00 82 4d 	beqlr   
-  c8:	64 17 c9 78 	rldicr  r9,r6,2,61
-  cc:	14 4a 63 7c 	add     r3,r3,r9
-  d0:	00 00 20 39 	li      r9,0
-  d4:	00 00 00 60 	nop
-  d8:	00 00 00 60 	nop
-  dc:	00 00 42 60 	ori     r2,r2,0
-  e0:	99 26 00 7c 	lxvd2x  vs32,0,r4
-  e4:	99 2e 20 7c 	lxvd2x  vs33,0,r5
-  e8:	04 00 29 39 	addi    r9,r9,4
-  ec:	10 00 84 38 	addi    r4,r4,16
-  f0:	40 48 a6 7f 	cmpld   cr7,r6,r9
-  f4:	10 00 a5 38 	addi    r5,r5,16
-  f8:	80 08 00 10 	vadduwm v0,v0,v1
-  fc:	99 1f 00 7c 	stxvd2x vs32,0,r3
- 100:	e0 ff 9d 41 	bgt     cr7,e0 <INTRIN_uint+0x20>
- 104:	20 00 80 4e 	blr
+00000000000000b0 <INTRIN_int>:
+  b0:	00 00 26 2c 	cmpdi   r6,0
+  b4:	20 00 82 4d 	beqlr   
+  b8:	64 17 c9 78 	rldicr  r9,r6,2,61
+  bc:	14 4a 63 7c 	add     r3,r3,r9
+  c0:	00 00 20 39 	li      r9,0
+  c4:	00 00 00 60 	nop
+  c8:	00 00 00 60 	nop
+  cc:	00 00 42 60 	ori     r2,r2,0
+  d0:	99 26 00 7c 	lxvd2x  vs32,0,r4
+  d4:	99 2e 20 7c 	lxvd2x  vs33,0,r5
+  d8:	04 00 29 39 	addi    r9,r9,4
+  dc:	10 00 84 38 	addi    r4,r4,16
+  e0:	40 48 a6 7f 	cmpld   cr7,r6,r9
+  e4:	10 00 a5 38 	addi    r5,r5,16
+  e8:	80 08 00 10 	vadduwm v0,v0,v1
+  ec:	99 1f 00 7c 	stxvd2x vs32,0,r3
+  f0:	e0 ff 9d 41 	bgt     cr7,d0 <INTRIN_int+0x20>
+  f4:	20 00 80 4e 	blr
 	...
- 114:	00 00 00 60 	nop
- 118:	00 00 00 60 	nop
- 11c:	00 00 42 60 	ori     r2,r2,0
+ 104:	00 00 00 60 	nop
+ 108:	00 00 00 60 	nop
+ 10c:	00 00 42 60 	ori     r2,r2,0
 
-0000000000000120 <INTRIN_int>:
- 120:	00 00 26 2c 	cmpdi   r6,0
- 124:	20 00 82 4d 	beqlr   
- 128:	64 17 c9 78 	rldicr  r9,r6,2,61
- 12c:	14 4a 63 7c 	add     r3,r3,r9
- 130:	00 00 20 39 	li      r9,0
- 134:	00 00 00 60 	nop
- 138:	00 00 00 60 	nop
- 13c:	00 00 42 60 	ori     r2,r2,0
- 140:	99 26 00 7c 	lxvd2x  vs32,0,r4
- 144:	99 2e 20 7c 	lxvd2x  vs33,0,r5
- 148:	04 00 29 39 	addi    r9,r9,4
- 14c:	10 00 84 38 	addi    r4,r4,16
- 150:	40 48 a6 7f 	cmpld   cr7,r6,r9
- 154:	10 00 a5 38 	addi    r5,r5,16
- 158:	80 08 00 10 	vadduwm v0,v0,v1
- 15c:	99 1f 00 7c 	stxvd2x vs32,0,r3
- 160:	e0 ff 9d 41 	bgt     cr7,140 <INTRIN_int+0x20>
- 164:	20 00 80 4e 	blr
+0000000000000110 <INTRIN_double>:
+ 110:	00 00 26 2c 	cmpdi   r6,0
+ 114:	20 00 82 4d 	beqlr   
+ 118:	24 1f c9 78 	rldicr  r9,r6,3,60
+ 11c:	14 4a 63 7c 	add     r3,r3,r9
+ 120:	00 00 20 39 	li      r9,0
+ 124:	00 00 00 60 	nop
+ 128:	00 00 00 60 	nop
+ 12c:	00 00 42 60 	ori     r2,r2,0
+ 130:	98 26 00 7c 	lxvd2x  vs0,0,r4
+ 134:	98 2e 80 7d 	lxvd2x  vs12,0,r5
+ 138:	02 00 29 39 	addi    r9,r9,2
+ 13c:	10 00 84 38 	addi    r4,r4,16
+ 140:	40 48 a6 7f 	cmpld   cr7,r6,r9
+ 144:	10 00 a5 38 	addi    r5,r5,16
+ 148:	00 63 00 f0 	xvadddp vs0,vs0,vs12
+ 14c:	98 1f 00 7c 	stxvd2x vs0,0,r3
+ 150:	e0 ff 9d 41 	bgt     cr7,130 <INTRIN_double+0x20>
+ 154:	20 00 80 4e 	blr
 	...
- 174:	00 00 00 60 	nop
- 178:	00 00 00 60 	nop
- 17c:	00 00 42 60 	ori     r2,r2,0
+ 164:	00 00 00 60 	nop
+ 168:	00 00 00 60 	nop
+ 16c:	00 00 42 60 	ori     r2,r2,0
 
-0000000000000180 <DEREF_ushort>:
- 180:	00 00 26 2c 	cmpdi   r6,0
- 184:	20 00 82 4d 	beqlr   
- 188:	a4 0f c9 78 	rldicr  r9,r6,1,62
- 18c:	00 00 40 39 	li      r10,0
- 190:	14 4a 63 7c 	add     r3,r3,r9
- 194:	00 00 20 39 	li      r9,0
- 198:	00 00 00 60 	nop
- 19c:	00 00 42 60 	ori     r2,r2,0
- 1a0:	99 4e 04 7c 	lxvd2x  vs32,r4,r9
- 1a4:	99 4e 25 7c 	lxvd2x  vs33,r5,r9
- 1a8:	08 00 4a 39 	addi    r10,r10,8
- 1ac:	10 00 29 39 	addi    r9,r9,16
- 1b0:	40 50 a6 7f 	cmpld   cr7,r6,r10
- 1b4:	40 08 00 10 	vadduhm v0,v0,v1
- 1b8:	99 1f 00 7c 	stxvd2x vs32,0,r3
- 1bc:	e4 ff 9d 41 	bgt     cr7,1a0 <DEREF_ushort+0x20>
- 1c0:	20 00 80 4e 	blr
+0000000000000170 <DEREF_schar>:
+ 170:	00 00 a6 2f 	cmpdi   cr7,r6,0
+ 174:	14 32 63 7c 	add     r3,r3,r6
+ 178:	00 00 20 39 	li      r9,0
+ 17c:	20 00 9e 4d 	beqlr   cr7
+ 180:	99 4e 04 7c 	lxvd2x  vs32,r4,r9
+ 184:	99 4e 25 7c 	lxvd2x  vs33,r5,r9
+ 188:	10 00 29 39 	addi    r9,r9,16
+ 18c:	40 48 a6 7f 	cmpld   cr7,r6,r9
+ 190:	00 08 00 10 	vaddubm v0,v0,v1
+ 194:	99 1f 00 7c 	stxvd2x vs32,0,r3
+ 198:	e8 ff 9d 41 	bgt     cr7,180 <DEREF_schar+0x10>
+ 19c:	20 00 80 4e 	blr
 	...
+ 1ac:	00 00 42 60 	ori     r2,r2,0
 
-00000000000001d0 <DEREF_short>:
- 1d0:	00 00 26 2c 	cmpdi   r6,0
- 1d4:	20 00 82 4d 	beqlr   
- 1d8:	a4 0f c9 78 	rldicr  r9,r6,1,62
- 1dc:	00 00 40 39 	li      r10,0
- 1e0:	14 4a 63 7c 	add     r3,r3,r9
- 1e4:	00 00 20 39 	li      r9,0
- 1e8:	18 00 00 48 	b       200 <DEREF_short+0x30>
- 1ec:	00 00 00 60 	nop
- 1f0:	00 00 00 60 	nop
- 1f4:	00 00 00 60 	nop
- 1f8:	00 00 00 60 	nop
- 1fc:	00 00 42 60 	ori     r2,r2,0
- 200:	99 4e 04 7c 	lxvd2x  vs32,r4,r9
- 204:	99 4e 25 7c 	lxvd2x  vs33,r5,r9
- 208:	08 00 4a 39 	addi    r10,r10,8
- 20c:	10 00 29 39 	addi    r9,r9,16
- 210:	40 50 a6 7f 	cmpld   cr7,r6,r10
- 214:	40 08 00 10 	vadduhm v0,v0,v1
- 218:	99 1f 00 7c 	stxvd2x vs32,0,r3
- 21c:	e4 ff 9d 41 	bgt     cr7,200 <DEREF_short+0x30>
- 220:	20 00 80 4e 	blr
+00000000000001b0 <DEREF_short>:
+ 1b0:	00 00 26 2c 	cmpdi   r6,0
+ 1b4:	20 00 82 4d 	beqlr   
+ 1b8:	a4 0f c9 78 	rldicr  r9,r6,1,62
+ 1bc:	00 00 40 39 	li      r10,0
+ 1c0:	14 4a 63 7c 	add     r3,r3,r9
+ 1c4:	00 00 20 39 	li      r9,0
+ 1c8:	18 00 00 48 	b       1e0 <DEREF_short+0x30>
+ 1cc:	00 00 00 60 	nop
+ 1d0:	00 00 00 60 	nop
+ 1d4:	00 00 00 60 	nop
+ 1d8:	00 00 00 60 	nop
+ 1dc:	00 00 42 60 	ori     r2,r2,0
+ 1e0:	99 4e 04 7c 	lxvd2x  vs32,r4,r9
+ 1e4:	99 4e 25 7c 	lxvd2x  vs33,r5,r9
+ 1e8:	08 00 4a 39 	addi    r10,r10,8
+ 1ec:	10 00 29 39 	addi    r9,r9,16
+ 1f0:	40 50 a6 7f 	cmpld   cr7,r6,r10
+ 1f4:	40 08 00 10 	vadduhm v0,v0,v1
+ 1f8:	99 1f 00 7c 	stxvd2x vs32,0,r3
+ 1fc:	e4 ff 9d 41 	bgt     cr7,1e0 <DEREF_short+0x30>
+ 200:	20 00 80 4e 	blr
 	...
 
-0000000000000230 <DEREF_uint>:
- 230:	00 00 26 2c 	cmpdi   r6,0
- 234:	20 00 82 4d 	beqlr   
- 238:	64 17 c9 78 	rldicr  r9,r6,2,61
- 23c:	00 00 40 39 	li      r10,0
- 240:	14 4a 63 7c 	add     r3,r3,r9
- 244:	00 00 20 39 	li      r9,0
- 248:	18 00 00 48 	b       260 <DEREF_uint+0x30>
- 24c:	00 00 00 60 	nop
- 250:	00 00 00 60 	nop
- 254:	00 00 00 60 	nop
- 258:	00 00 00 60 	nop
- 25c:	00 00 42 60 	ori     r2,r2,0
- 260:	99 4e 04 7c 	lxvd2x  vs32,r4,r9
- 264:	99 4e 25 7c 	lxvd2x  vs33,r5,r9
- 268:	04 00 4a 39 	addi    r10,r10,4
- 26c:	10 00 29 39 	addi    r9,r9,16
- 270:	40 50 a6 7f 	cmpld   cr7,r6,r10
- 274:	80 08 00 10 	vadduwm v0,v0,v1
- 278:	99 1f 00 7c 	stxvd2x vs32,0,r3
- 27c:	e4 ff 9d 41 	bgt     cr7,260 <DEREF_uint+0x30>
- 280:	20 00 80 4e 	blr
+0000000000000210 <DEREF_int>:
+ 210:	00 00 26 2c 	cmpdi   r6,0
+ 214:	20 00 82 4d 	beqlr   
+ 218:	64 17 c9 78 	rldicr  r9,r6,2,61
+ 21c:	00 00 40 39 	li      r10,0
+ 220:	14 4a 63 7c 	add     r3,r3,r9
+ 224:	00 00 20 39 	li      r9,0
+ 228:	18 00 00 48 	b       240 <DEREF_int+0x30>
+ 22c:	00 00 00 60 	nop
+ 230:	00 00 00 60 	nop
+ 234:	00 00 00 60 	nop
+ 238:	00 00 00 60 	nop
+ 23c:	00 00 42 60 	ori     r2,r2,0
+ 240:	99 4e 04 7c 	lxvd2x  vs32,r4,r9
+ 244:	99 4e 25 7c 	lxvd2x  vs33,r5,r9
+ 248:	04 00 4a 39 	addi    r10,r10,4
+ 24c:	10 00 29 39 	addi    r9,r9,16
+ 250:	40 50 a6 7f 	cmpld   cr7,r6,r10
+ 254:	80 08 00 10 	vadduwm v0,v0,v1
+ 258:	99 1f 00 7c 	stxvd2x vs32,0,r3
+ 25c:	e4 ff 9d 41 	bgt     cr7,240 <DEREF_int+0x30>
+ 260:	20 00 80 4e 	blr
 	...
 
-0000000000000290 <DEREF_int>:
- 290:	00 00 26 2c 	cmpdi   r6,0
- 294:	20 00 82 4d 	beqlr   
- 298:	64 17 c9 78 	rldicr  r9,r6,2,61
- 29c:	00 00 40 39 	li      r10,0
- 2a0:	14 4a 63 7c 	add     r3,r3,r9
- 2a4:	00 00 20 39 	li      r9,0
- 2a8:	18 00 00 48 	b       2c0 <DEREF_int+0x30>
- 2ac:	00 00 00 60 	nop
- 2b0:	00 00 00 60 	nop
- 2b4:	00 00 00 60 	nop
- 2b8:	00 00 00 60 	nop
- 2bc:	00 00 42 60 	ori     r2,r2,0
- 2c0:	99 4e 04 7c 	lxvd2x  vs32,r4,r9
- 2c4:	99 4e 25 7c 	lxvd2x  vs33,r5,r9
- 2c8:	04 00 4a 39 	addi    r10,r10,4
- 2cc:	10 00 29 39 	addi    r9,r9,16
- 2d0:	40 50 a6 7f 	cmpld   cr7,r6,r10
- 2d4:	80 08 00 10 	vadduwm v0,v0,v1
- 2d8:	99 1f 00 7c 	stxvd2x vs32,0,r3
- 2dc:	e4 ff 9d 41 	bgt     cr7,2c0 <DEREF_int+0x30>
- 2e0:	20 00 80 4e 	blr
+0000000000000270 <DEREF_double>:
+ 270:	00 00 26 2c 	cmpdi   r6,0
+ 274:	20 00 82 4d 	beqlr   
+ 278:	24 1f c9 78 	rldicr  r9,r6,3,60
+ 27c:	00 00 40 39 	li      r10,0
+ 280:	14 4a 63 7c 	add     r3,r3,r9
+ 284:	00 00 20 39 	li      r9,0
+ 288:	18 00 00 48 	b       2a0 <DEREF_double+0x30>
+ 28c:	00 00 00 60 	nop
+ 290:	00 00 00 60 	nop
+ 294:	00 00 00 60 	nop
+ 298:	00 00 00 60 	nop
+ 29c:	00 00 42 60 	ori     r2,r2,0
+ 2a0:	98 4e 04 7c 	lxvd2x  vs0,r4,r9
+ 2a4:	98 4e 85 7d 	lxvd2x  vs12,r5,r9
+ 2a8:	02 00 4a 39 	addi    r10,r10,2
+ 2ac:	10 00 29 39 	addi    r9,r9,16
+ 2b0:	40 50 a6 7f 	cmpld   cr7,r6,r10
+ 2b4:	00 63 00 f0 	xvadddp vs0,vs0,vs12
+ 2b8:	98 1f 00 7c 	stxvd2x vs0,0,r3
+ 2bc:	e4 ff 9d 41 	bgt     cr7,2a0 <DEREF_double+0x30>
+ 2c0:	20 00 80 4e 	blr
 	...
 
 Disassembly of section .comment:
 
 0000000000000000 <.comment>:
-   0:	00 47 43 43 	bc-     26,so,4700 <DEREF_int+0x4470>
+   0:	00 47 43 43 	bc-     26,so,4700 <DEREF_double+0x4490>
    4:	3a 20 28 55 	rlwinm  r8,r9,4,0,29
    8:	62 75 6e 74 	andis.  r14,r3,30050
-   c:	75 2f 49 42 	bcl     18,4*cr2+gt,2f80 <DEREF_int+0x2cf0>
+   c:	75 2f 49 42 	bcl     18,4*cr2+gt,2f80 <DEREF_double+0x2d10>
   10:	4d 20 35 2e 	cmpdi   cr4,r21,8269
   14:	35 2e 30 2d 	cmpdi   cr2,r16,11829
   18:	31 32 75 62 	ori     r21,r19,12849
