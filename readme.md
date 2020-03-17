@@ -39,25 +39,53 @@ MMU		: Radix
 #### The purposed methods
 
 - load via intrinsics `vec_xl/vec_vsx_ld` : the default in OpenCV
-- load via `cast & dereference`: e.g. `__vector float load = *((__vector float *)ptr)`, [deref.patch](https://github.com/seiko2plus/vsx_mem_test/blob/master/patches/deref.patch)
-- load via `vector assignment` :  e.g. `__vector float load = (__vector float){ptr[0], ptr[1], ptr[3], ptr[4]}`, [assign.patch](https://github.com/seiko2plus/vsx_mem_test/blob/master/patches/assign.patch)
+- load via assignment `cast & dereference`: e.g. `__vector float load = *((__vector float *)ptr)`, [deref.patch](patches/deref.patch)
+- load via assignment `curly braces initlizer {}` :  e.g. `__vector float load = (__vector float){ptr[0], ptr[1], ptr[3], ptr[4]}`, [assign.patch](patches/assign.patch)
 - store via intrinsics `vec_xst/vec_vsx_st` : the default in OpenCV
-- store via `cast & dereference`: e.g. `*((__vector float *)ptr) = vector`, [store-deref.patch](https://github.com/seiko2plus/vsx_mem_test/blob/master/patches/store-deref.patch)
+- store via `cast & dereference`: e.g. `*((__vector float *)ptr) = vector`, [store-deref.patch](patches/store-deref.patch)
+---
+
+#### Benchmarking results with baseline ISA3.00 A.K.A  Power9/VSX3
+[GCC 8.3.0](reports_vsx3/gcc_8_vs_deref_gcc_8_assign_gcc_8_store-deref_gcc_8.md), [GCC 7.4.0](reports_vsx3/gcc_7_vs_deref_gcc_7_assign_gcc_7_store-deref_gcc_7.md), [GCC 6.5.0](reports_vsx3/gcc_6_vs_deref_gcc_6_assign_gcc_6_store-deref_gcc_6.md), [Clang 5.0.1](reports_vsx3/clang_5.0_vs_deref_clang_5.0_assign_clang_5.0_store-deref_clang_5.0.md), [Clang 6.0.1](reports_vsx3/clang_6.0_vs_deref_clang_6.0_assign_clang_6.0_store-deref_clang_6.0.md), [Clang 7.0.1](reports_vsx3/clang_7_vs_deref_clang_7_assign_clang_7_store-deref_clang_7.md) , [Clang 8.0](reports_vsx3/clang_8_vs_deref_clang_8_assign_clang_8_store-deref_clang_8.md)
+
+
+#### Benchmarking results with baseline ISA2.07 A.K.A  Power8/VSX
+[GCC 8.3.0](reports_vsx/gcc_8_vs_assign_gcc_8.md), [GCC 7.4.0](reports_vsx/gcc_7_vs_deref_gcc_7_assign_gcc_7_store-deref_gcc_7.md), [GCC 6.5.0](reports_vsx/gcc_6_vs_deref_gcc_6_assign_gcc_6_store-deref_gcc_6.md), [GCC 5.5.0](reports_vsx/gcc_5_vs_deref_gcc_5_assign_gcc_5_store-deref_gcc_5.md), [GCC 4.9.3](reports_vsx/gcc_4.9_vs_deref_gcc_4.9_assign_gcc_4.9_store-deref_gcc_4.9.md), [Clang 4.0.1](reports_vsx/clang_4.0_vs_deref_clang_4.0_assign_clang_4.0_store-deref_clang_4.0.md), [Clang 5.0.1](reports_vsx/clang_5.0_vs_assign_clang_5.0.md), [Clang 6.0.1](reports_vsx/clang_6_vs_assign_clang_6.md), [Clang 7.0.1](reports_vsx/clang_7_vs_assign_clang_7.md) , [Clang 8.0](reports_vsx/clang_8_vs_assign_clang_8.md)
 
 ---
 
 #### Summary
 
-TODO
+After reviewing the test results and checking the generated instructions by the GCC and Clang compilers, it turns out that:
 
----
+##### GCC couldn't optimize `vector assignment` via curly braces initlizer `{*}` but Clang can
 
-#### Benchmarking results with baseline ISA3.00 A.K.A  Power9/VSX3
-[GCC 8.3.0](reports_vsx3/gcc_8_vs_deref_gcc_8_assign_gcc_8_store-deref_gcc_8.md), [GCC 7.4.0](reports_vsx3/gcc_7_vs_deref_gcc_7_assign_gcc_7_store-deref_gcc_7.md), [GCC 6.5.0](reports_vsx3/gcc_6_vs_deref_gcc_6_assign_gcc_6_store-deref_gcc_6.md), [Clang 5.0.1](reports_vsx3/clang_5.0_vs_deref_clang_5.0_assign_clang_5.0_store-deref_clang_5.0.md), [Clang 6.0.1](reports_vsx3/clang_6.0_vs_deref_clang_6.0_assign_clang_6.0_store-deref_clang_6.0.md), [Clang 7.0.1](reports_vsx3/clang_7_vs_deref_clang_7_assign_clang_7_store-deref_clang_7.md) , [Clang 8.0.1](reports_vsx3/clang_8_vs_deref_clang_8_assign_clang_8_store-deref_clang_8.md)
+When raising the level of complexity, the GCC compiler starting to generate a badly optimized machine code,
+it seems to me that GCC can only optimize simple operations mainly when immediate constants involved, e.g. vector splat.
 
+If you looked at the benchmarks for example [GCC 8.3.0(VSX3)](reports_vsx3/gcc_8_vs_deref_gcc_8_assign_gcc_8_store-deref_gcc_8.md) under columen
+`assign gcc 8 vs gcc 8 (x-factor)` which compare `default(vec_xl/vec_vsx_ld)` with vector assignment through `curly braces initlizer {}`,
+you will realize a massive lose of performance but in other side [Clang 7.0.1(VSX)](reports_vsx3/clang_7_vs_deref_clang_7_assign_clang_7_store-deref_clang_7.md) doing a great job.
 
-#### Benchmarking results with baseline ISA2.07 A.K.A  Power8/VSX
-[GCC 8.3.0](reports_vsx/gcc_8_vs_assign_gcc_8.md), [GCC 7.4.0](reports_vsx/gcc_7_vs_deref_gcc_7_assign_gcc_7_store-deref_gcc_7.md), [GCC 6.5.0](reports_vsx/gcc_6_vs_deref_gcc_6_assign_gcc_6_store-deref_gcc_6.md), [GCC 5.5.0](reports_vsx/gcc_5_vs_deref_gcc_5_assign_gcc_5_store-deref_gcc_5.md), [GCC 4.9.3](reports_vsx/gcc_4.9_vs_deref_gcc_4.9_assign_gcc_4.9_store-deref_gcc_4.9.md), [Clang 4.0.1](reports_vsx/clang_4.0_vs_deref_clang_4.0_assign_clang_4.0_store-deref_clang_4.0.md), [Clang 5.0.1](reports_vsx/clang_5.0_vs_assign_clang_5.0.md), [Clang 6.0.1](reports_vsx/clang_6_vs_assign_clang_6.md), [Clang 7.0.1](reports_vsx/clang_7_vs_assign_clang_7.md) , [Clang 8.0.1](reports_vsx/clang_8_vs_assign_clang_8.md)
+##### Load/Store via (cast & dereference) is buggy
+
+With almost all clang versions(except clang-4) and gcc8(older versions are working just fine) when VSX3(power9/ISA3.00) isn't enabled,
+these compilers tends to generate instructions 'lvx/stvx' instead of 'lxvd2x/lxvw4x/stxvd2x/stxvw4x', which lead to break
+the accuracy tests when unaligned memory addresses are involved.
+
+For proves check the following accuracy tests:
+[GCC 8.3.0(VSX Deref Load)](reports_vsx/deref_gcc_8_test.log), [GCC 8.3.0(VSX Deref Store)](reports_vsx/store-deref_gcc_8_test.log), [Clang 5.0.1(VSX Deref Load)](reports_vsx/deref_clang_5.0_test.log), [Clang 5.0.1(VSX Deref Store)](reports_vsx/store-deref_clang_5.0_test.log), [Clang 6.0.1(VSX Deref Load)](reports_vsx/deref_clang_6.0_test.log), [Clang 6.0.1(VSX Deref Store)](reports_vsx/store-deref_clang_6.0_test.log), [Clang 7.0.1(VSX Deref Load)](reports_vsx/deref_clang_7_test.log), [Clang 7.0.1(VSX Deref Store)](reports_vsx/store-deref_clang_7_test.log), [Clang 8.0(VSX Deref Load)](reports_vsx/deref_clang_8_test.log), [Clang 8.0(VSX Deref Store)](reports_vsx/store-deref_clang_8_test.log)
+
+Also, check generated machine code in [samples](samples), note in case of GCC8, the compiler seems to me that can generate instructions lxvd2x/stxvd2x correctly but when it comes to more complected kernels it fails and for somehow its generate 'lvx/stvx' instead.
+
+##### Load/Store via (cast & dereference) vs vec_xl/vec_vsx_ld/vec_xst/vec_vsx_st
+
+It seems safe to Load/Store via (cast & dereference) when VSX3(ISA3.00) is enabled with all compilers and
+also if (VSX2.07) is enabled old compilers of GCC (<= 7), not sure if GCC9 and GCC10 have same GCC8 bug yet,
+however, I will update the testing units later to support them.
+
+But anyway is there any performance gain?
+No, its seems to me that there's no differences between both methods almost perform the same.
 
 ----
 
