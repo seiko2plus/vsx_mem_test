@@ -21,7 +21,7 @@ typedef __vector double v_double;
             v_##TYPE a = MMEM##_LOAD(TYPE, src1 + step); \
             v_##TYPE b = MMEM##_LOAD(TYPE, src2 + step); \
             v_##TYPE add = vec_add(a, b); \
-            MMEM##_STORE(TYPE, dst + len, add); \
+            MMEM##_STORE(TYPE, dst + step, add); \
         } \
     }
 
